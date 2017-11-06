@@ -1,4 +1,0 @@
-﻿  InstallOpencv.cpp
-InstallOpencv.obj : error LNK2019: 无法解析的外部符号 "public: void __cdecl cv::Mat::convertTo(class cv::debug_build_guard::_OutputArray const &,int,double,double)const " (?convertTo@Mat@cv@@QEBAXAEBV_OutputArray@debug_build_guard@2@HNN@Z)，该符号在函数 "public: class cv::Mat_<class cv::Vec<unsigned char,3> > & __cdecl cv::Mat_<class cv::Vec<unsigned char,3> >::operator=(class cv::Mat &&)" (??4?$Mat_@V?$Vec@E$02@cv@@@cv@@QEAAAEAV01@$$QEAVMat@1@@Z) 中被引用
-InstallOpencv.obj : error LNK2019: 无法解析的外部符号 "void __cdecl cv::imshow(class cv::String const &,class cv::debug_build_guard::_InputArray const &)" (?imshow@cv@@YAXAEBVString@1@AEBV_InputArray@debug_build_guard@1@@Z)，该符号在函数 main 中被引用
-D:\VisualStudioSolutions\OpencvSolution\x64\Debug\InstallOpencv.exe : fatal error LNK1120: 2 个无法解析的外部命令
