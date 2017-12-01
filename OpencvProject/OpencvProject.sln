@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26228.9
+VisualStudioVersion = 15.0.27004.2008
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ColorSpaceReduction", "ColorSpaceReduction\ColorSpaceReduction.vcxproj", "{1A456A5B-FB3B-4AB2-9156-2E6CDE575B83}"
 EndProject
@@ -10,6 +10,12 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GradualChangedColor", "GradualChangedColor\GradualChangedColor.vcxproj", "{0475A59A-FFCE-4C24-82AB-FB2AA1DBC30D}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GrayLevelChange", "GrayLevelChange\GrayLevelChange.vcxproj", "{D8248846-A8F8-45F8-87F5-07552D0F0FF7}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Gistogram", "Gistogram\Gistogram.vcxproj", "{3BB33733-A884-4E0D-9676-1DA5844E5FBA}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SpaceSmoothing", "SpaceSmoothing\SpaceSmoothing.vcxproj", "{AFCC50EC-5687-4F85-AEA1-BE8C6AAD4E3C}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FrequencydomainSmoothing", "FrequencydomainSmoothing\FrequencydomainSmoothing.vcxproj", "{63FFA7F3-BA00-419D-96A0-4852A47ED63E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,8 +57,35 @@ Global
 		{D8248846-A8F8-45F8-87F5-07552D0F0FF7}.Release|x64.Build.0 = Release|x64
 		{D8248846-A8F8-45F8-87F5-07552D0F0FF7}.Release|x86.ActiveCfg = Release|Win32
 		{D8248846-A8F8-45F8-87F5-07552D0F0FF7}.Release|x86.Build.0 = Release|Win32
+		{3BB33733-A884-4E0D-9676-1DA5844E5FBA}.Debug|x64.ActiveCfg = Debug|x64
+		{3BB33733-A884-4E0D-9676-1DA5844E5FBA}.Debug|x64.Build.0 = Debug|x64
+		{3BB33733-A884-4E0D-9676-1DA5844E5FBA}.Debug|x86.ActiveCfg = Debug|Win32
+		{3BB33733-A884-4E0D-9676-1DA5844E5FBA}.Debug|x86.Build.0 = Debug|Win32
+		{3BB33733-A884-4E0D-9676-1DA5844E5FBA}.Release|x64.ActiveCfg = Release|x64
+		{3BB33733-A884-4E0D-9676-1DA5844E5FBA}.Release|x64.Build.0 = Release|x64
+		{3BB33733-A884-4E0D-9676-1DA5844E5FBA}.Release|x86.ActiveCfg = Release|Win32
+		{3BB33733-A884-4E0D-9676-1DA5844E5FBA}.Release|x86.Build.0 = Release|Win32
+		{AFCC50EC-5687-4F85-AEA1-BE8C6AAD4E3C}.Debug|x64.ActiveCfg = Debug|x64
+		{AFCC50EC-5687-4F85-AEA1-BE8C6AAD4E3C}.Debug|x64.Build.0 = Debug|x64
+		{AFCC50EC-5687-4F85-AEA1-BE8C6AAD4E3C}.Debug|x86.ActiveCfg = Debug|Win32
+		{AFCC50EC-5687-4F85-AEA1-BE8C6AAD4E3C}.Debug|x86.Build.0 = Debug|Win32
+		{AFCC50EC-5687-4F85-AEA1-BE8C6AAD4E3C}.Release|x64.ActiveCfg = Release|x64
+		{AFCC50EC-5687-4F85-AEA1-BE8C6AAD4E3C}.Release|x64.Build.0 = Release|x64
+		{AFCC50EC-5687-4F85-AEA1-BE8C6AAD4E3C}.Release|x86.ActiveCfg = Release|Win32
+		{AFCC50EC-5687-4F85-AEA1-BE8C6AAD4E3C}.Release|x86.Build.0 = Release|Win32
+		{63FFA7F3-BA00-419D-96A0-4852A47ED63E}.Debug|x64.ActiveCfg = Debug|x64
+		{63FFA7F3-BA00-419D-96A0-4852A47ED63E}.Debug|x64.Build.0 = Debug|x64
+		{63FFA7F3-BA00-419D-96A0-4852A47ED63E}.Debug|x86.ActiveCfg = Debug|Win32
+		{63FFA7F3-BA00-419D-96A0-4852A47ED63E}.Debug|x86.Build.0 = Debug|Win32
+		{63FFA7F3-BA00-419D-96A0-4852A47ED63E}.Release|x64.ActiveCfg = Release|x64
+		{63FFA7F3-BA00-419D-96A0-4852A47ED63E}.Release|x64.Build.0 = Release|x64
+		{63FFA7F3-BA00-419D-96A0-4852A47ED63E}.Release|x86.ActiveCfg = Release|Win32
+		{63FFA7F3-BA00-419D-96A0-4852A47ED63E}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B96DDDF4-C27D-4B67-93DB-DAC91C9C8AAA}
 	EndGlobalSection
 EndGlobal

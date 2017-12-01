@@ -1,0 +1,4 @@
+﻿  SpaceSmoothing.cpp
+f:\visualstudiosolution\opencvproject\spacesmoothing\spacesmoothing.cpp(26): warning C4305: “参数”: 从“double”到“float”截断
+f:\visualstudiosolution\opencvproject\spacesmoothing\spacesmoothing.cpp(88): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+  SpaceSmoothing.vcxproj -> F:\VisualStudioSolution\OpencvProject\x64\Debug\SpaceSmoothing.exe

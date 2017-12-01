@@ -1,0 +1,9 @@
+﻿  FrequencydomainSmoothing.cpp
+f:\visualstudiosolution\opencvproject\frequencydomainsmoothing\frequencydomainsmoothing.cpp(38): warning C4244: “*=”: 从“double”转换到“float”，可能丢失数据
+f:\visualstudiosolution\opencvproject\frequencydomainsmoothing\frequencydomainsmoothing.cpp(82): warning C4244: “*=”: 从“double”转换到“float”，可能丢失数据
+f:\visualstudiosolution\opencvproject\frequencydomainsmoothing\frequencydomainsmoothing.cpp(97): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+f:\visualstudiosolution\opencvproject\frequencydomainsmoothing\frequencydomainsmoothing.cpp(133): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+f:\visualstudiosolution\opencvproject\frequencydomainsmoothing\frequencydomainsmoothing.cpp(138): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+f:\visualstudiosolution\opencvproject\frequencydomainsmoothing\frequencydomainsmoothing.cpp(157): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+f:\visualstudiosolution\opencvproject\frequencydomainsmoothing\frequencydomainsmoothing.cpp(162): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+  FrequencydomainSmoothing.vcxproj -> F:\VisualStudioSolution\OpencvProject\x64\Debug\FrequencydomainSmoothing.exe

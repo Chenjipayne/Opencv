@@ -1,41 +1,116 @@
+
 #include<iostream>  
 #include<opencv2/opencv.hpp>
+#include<math.h>
 
 using namespace std;
 using namespace cv;
 
-int ContrastValue;
-int BrightValue;
+void ContrastAndBright(int, void*);
+Mat grayscale(Mat& I);
 
-void on_Trackbar(int, void *)
-{
-	
-}
+Mat img = imread("input.jpg");
+Mat newimg = img.clone();
+//
+//
+//int ContrastValue = 100;
+//int BrightnessValue = 0;
+//
+//int main()
+//{
+//	namedWindow("【灰度化窗口】", WINDOW_NORMAL);
+//	createTrackbar("对比度：", "【灰度化窗口】", &ContrastValue, 300, ContrastAndBright);
+//	createTrackbar("亮度：", "【灰度化窗口】", &BrightnessValue, 255, ContrastAndBright);
+//	ContrastAndBright(ContrastValue, 0);
+//	ContrastAndBright(BrightnessValue, 0);
+//	waitKey(0);
+//	return 0;
+//}
+//
+//void ContrastAndBright(int, void*)
+//{
+//	for (int i = 0; i<img.rows; ++i)
+//	{
+//		for (int j = 0; j<img.cols; ++j)
+//		{
+//			for (int c = 0; c<3; c++)
+//			{
+//				newimg.at<Vec3b>(i, j)[c] = saturate_cast<uchar>((img.at<Vec3b>(i, j)[c] * 0.01*ContrastValue) + BrightnessValue);
+//			}
+//		}
+//	}
+//	imshow("【原图】", img);
+//	imshow("【灰度化窗口】", newimg);
+//}
 
 int main()
 {
-	const char* filename = "input.jpg";
-	Mat srcImg = imread(filename, CV_LOAD_IMAGE_COLOR);
-	if (srcImg.empty())
-		return -1;
-	int channels = srcImg.channels();
-	int nRows = srcImg.rows;
-	int nCols = srcImg.cols;  
-
-	createTrackbar("ContrastValue", "ImageGrayLevelChange", &ContrastValue, 300, on_Trackbar);
-	on_Trackbar(ContrastValue, 0);
-	Mat graylevelchangeImg;
-	for (int x = 0; x < srcImg.rows; x++)
+	int x1, y1, x2, y2;
+	cout << "输入拐点A坐标：" << endl;
+	cin >> x1 >> y1;
+	cout << "输入拐点B坐标：" << endl;
+	cin >> x2 >> y2;
+	uchar table[256];
+	for (int i = 0; i < 256; ++i)
 	{
-		for (int y = 0; y < srcImg.cols; y++)
+		if (i < x1)
+			table[i] = (y1 / x1) * i;
+		else if (x1 < i && i < x2)
+			table[i] = (y2 - y1) / (x2 - x1)*i + y1;
+		else if (i > x2)
+			table[i] = ((255-y2) / (255-x2))*i + y2;
+	}
+	for (int i = 0; i<img.rows; ++i)
+	{
+		for (int j = 0; j<img.cols; ++j)
 		{
-			for (int c = 0; c < 3; c++)
+			for (int c = 0; c<3; c++)
 			{
-				graylevelchangeImg.at<Vec3b>(x, y)[c] = saturate_cast<uchar>((ContrastValue*0.01)*(srcImg.at<Vec3b>(x, y)[c]) + BrightValue);
+				newimg.at<Vec3b>(i, j)[c] = saturate_cast<uchar>(table[(img.at<Vec3b>(i, j)[c])]);
 			}
 		}
 	}
-	imshow("ImageGrayLevelChange", graylevelchangeImg);
+	imshow("【原图】", img);
+	imshow("【灰度化窗口】", newimg);
 	waitKey(0);
-	return 0;
 }
+
+//int main()
+//{
+//	Mat img = imread("input.jpg");
+//	Mat Img = grayscale(img);
+//	uchar table[256];
+//	for (int i = 0; i < 256; ++i)
+//	{
+//			table[i] = 40*log(1+i);
+//	}
+//	for (int i = 0; i<Img.rows; ++i)
+//	{
+//		for (int j = 0; j<Img.cols; ++j)
+//		{
+//			Img.at<uchar>(i, j) = saturate_cast<uchar>(table[(Img.at<uchar>(i, j))]);
+//		}
+//	}
+//	imshow("【灰度化窗口】", Img);
+//	imshow("【原图窗口】", img);
+//	waitKey(0);
+//}
+//
+//Mat grayscale(Mat& I)
+//{
+//	int channels = I.channels();
+//	int nRows = I.rows;
+//	int nCols = I.cols;  //每行的元素个数
+//
+//	Mat GrayscaleImg(nRows, nCols, CV_8UC1);
+//	int i, j, k;
+//	//双重循环，遍历所有像素值
+//	for (i = 0; i < nRows; ++i)
+//	{
+//		for (j = 0, k = 0; j < nCols; ++j, k = k + 3)
+//		{
+//			GrayscaleImg.at<uchar>(i, j) = (int)( I.at<Vec3b>(i, j)[0] * 0.11 + I.at<Vec3b>(i, j)[1]*0.59 + I.at<Vec3b>(i, j)[2] * 0.30);
+//		}
+//	}
+//	return GrayscaleImg;
+//}

@@ -1,0 +1,8 @@
+﻿  Gistogram.cpp
+f:\visualstudiosolution\opencvproject\gistogram\gistogram.cpp(71): warning C4244: “=”: 从“double”转换到“uchar”，可能丢失数据
+f:\visualstudiosolution\opencvproject\gistogram\gistogram.cpp(79): warning C4244: “=”: 从“double”转换到“uchar”，可能丢失数据
+f:\visualstudiosolution\opencvproject\gistogram\gistogram.cpp(87): warning C4244: “=”: 从“double”转换到“uchar”，可能丢失数据
+f:\visualstudiosolution\opencvproject\gistogram\gistogram.cpp(96): warning C4244: “=”: 从“double”转换到“uchar”，可能丢失数据
+f:\visualstudiosolution\opencvproject\gistogram\gistogram.cpp(97): warning C4244: “=”: 从“double”转换到“uchar”，可能丢失数据
+f:\visualstudiosolution\opencvproject\gistogram\gistogram.cpp(98): warning C4244: “=”: 从“double”转换到“uchar”，可能丢失数据
+  Gistogram.vcxproj -> F:\VisualStudioSolution\OpencvProject\x64\Debug\Gistogram.exe
